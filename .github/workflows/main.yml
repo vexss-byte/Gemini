@@ -34,7 +34,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lapergods-jar
-          path: build/libs/lapergods-*.jar
+          path: build/libs/*.jar
           exclude: |
             build/libs/*-sources.jar
             build/libs/*-dev.jar
+          if-no-files-found: error
