@@ -1,7 +1,8 @@
-# Lapergods Mod (Fabric 26.3) - Fase 1
+# Lapergods Mod (Fabric 26.3) - Fase 2
 
-## Cara Build via GitHub Actions
-1. Unggah seluruh isi repositori ini ke root repo GitHub milikmu.
-2. Pastikan file `.github/workflows/build.yml` sudah terpasang.
-3. Buka tab **Actions** di GitHub, tunggu hingga workflow build selesai.
-4. Unduh artifact **`lapergods-jar`**.
+## Fitur Fase 2:
+- Registrasi item & block `lapergods:thor_statue`.
+- Integrasi `GeoBlockEntity` & `GeoBlockRenderer` GeckoLib 5.5.7.
+- Model `.geo.json` & animasi `.animation.json` (idle loop 4s & power_up 3s).
+- Perluasan render bounding box (`AABB`) agar tidak ter-cull saat ditempatkan di dunia.
+- Interaksi klik kanan memicu animasi `power_up`.

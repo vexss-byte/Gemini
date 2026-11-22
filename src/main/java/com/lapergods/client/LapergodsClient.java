@@ -1,6 +1,9 @@
 package com.lapergods.client;
 
+import com.lapergods.LapergodsMod;
+import com.lapergods.client.render.ThorStatueBlockRenderer;
 import net.fabricmc.api.ClientModInitializer;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,6 +12,7 @@ public class LapergodsClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        LOGGER.info("Lapergods Mod (Fase 1) initialized on Client!");
+        BlockEntityRenderers.register(LapergodsMod.THOR_STATUE_BE, ThorStatueBlockRenderer::new);
+        LOGGER.info("Lapergods Client Renderer registered for Thor Statue!");
     }
 }
