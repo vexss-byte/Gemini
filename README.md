@@ -1,7 +1,5 @@
-# Lapergods Mod (Fabric 26.3) - Fase 2 (v2 Fixed)
+# Lapergods Mod (Fabric 26.3) - Fase 2 (v3 Fixed)
 
 ## Fitur & Fixes:
-- Penggunaan `gradle build` langsung melalui `gradle/actions/setup-gradle@v3` (mengatasi `gradlew` placeholder).
-- Sintaks exclusion `upload-artifact@v4` disesuaikan (memakai pattern negative `!build/libs/*-sources.jar` di bawah `path`).
-- Registrasi item & block `lapergods:thor_statue`.
-- Integrasi `GeoBlockEntity` & `GeoBlockRenderer` GeckoLib 5.5.7.
+- Mengganti `gradle-version: '9.0'` menjadi `gradle-version: '8.12'` di `build.yml` (karena versi 9.0 belum ada di GitHub Actions setup-gradle).
+- Menggunakan Gradle 8.12 runner untuk kompilasi Java 25 & Fabric Loom 1.17.21.
