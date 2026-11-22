@@ -1,5 +1,4 @@
-# Lapergods Mod (Fabric 26.3) - Fase 2 (v3 Fixed)
+# Lapergods Mod (Fabric 26.3) - Fase 2 (v4 Fixed JDK Dual Setup)
 
-## Fitur & Fixes:
-- Mengganti `gradle-version: '9.0'` menjadi `gradle-version: '8.12'` di `build.yml` (karena versi 9.0 belum ada di GitHub Actions setup-gradle).
-- Menggunakan Gradle 8.12 runner untuk kompilasi Java 25 & Fabric Loom 1.17.21.
+## Fix:
+- `Unsupported class file major version 69`: Gradle Daemon dijalankan dengan JDK 21 LTS (agar ASM Groovy script parser Gradle 8.12 berjalan tanpa error), sementara JDK 25 dipasang untuk target kompilasi code Fabric 26.3.
