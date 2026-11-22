@@ -1,5 +1,3 @@
-rootProject.name = 'lapergods'
-
 pluginManagement {
     repositories {
         maven { name = 'Fabric'; url = 'https://maven.fabricmc.net/' }
@@ -7,3 +5,5 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+rootProject.name = 'lapergods'
