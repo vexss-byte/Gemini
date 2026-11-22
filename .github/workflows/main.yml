@@ -23,19 +23,18 @@ jobs:
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
-
-      - name: Grant Execute Permission for Gradlew
-        run: chmod +x gradlew
+        with:
+          gradle-version: '9.0'
 
       - name: Build Mod with Gradle
-        run: ./gradlew build --stacktrace
+        run: gradle build --stacktrace
 
       - name: Upload Mod Artifact
         uses: actions/upload-artifact@v4
         with:
           name: lapergods-jar
-          path: build/libs/*.jar
-          exclude: |
-            build/libs/*-sources.jar
-            build/libs/*-dev.jar
+          path: |
+            build/libs/*.jar
+            !build/libs/*-sources.jar
+            !build/libs/*-dev.jar
           if-no-files-found: error
