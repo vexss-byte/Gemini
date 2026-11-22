@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "lapergods",
+  "version": "${version}",
+  "name": "Lapergods",
+  "description": "Mod Patung Dewa Thor, Senjata Takdir, Kamera Sinematik & Efek Badai",
+  "authors": [
+    "Lapergods Team"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/lapergods/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.lapergods.LapergodsMod"
+    ],
+    "client": [
+      "com.lapergods.client.LapergodsClient"
+    ]
+  },
+  "mixins": [
+    "lapergods.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "geckolib": ">=5.5.7"
+  }
+}
